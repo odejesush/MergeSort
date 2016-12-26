@@ -1,5 +1,5 @@
 /*
-** File Name: MergeSort.H
+** File Name: MergeSort.h
 ** Author: Ovidio de Jesus Henriquez
 ** 
 ** This file contains my implementation of the merge sort algorithm to use for
