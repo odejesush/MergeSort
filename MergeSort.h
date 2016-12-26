@@ -18,13 +18,13 @@ std::vector<T> merge_sort(std::vector<T> unsorted)
   if (unsorted.size() != 1)
   {
     // Divide the vector into subvectors
-    int lower_half = std::ceil(unsorted.size());
+    int lower_half = ceil(unsorted.size() / 2.0);
     std::vector<T> first(unsorted.begin(), unsorted.begin() + lower_half);
     std::vector<T> last(unsorted.begin() + lower_half, unsorted.end());
 
     // Recursively call the merge_sort function on the subvectors
-    sorted_first = merge_sort(first);
-    sorted_last = merge_sort(last);
+    std::vector<T> sorted_first = merge_sort(first);
+    std::vector<T> sorted_last = merge_sort(last);
 
     // Combine and sort the two subarrays
     std::vector<T> sorted;
